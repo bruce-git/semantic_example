@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息</title>
+    <link rel="stylesheet" href="semantic/dist/semantic.css">
+</head>
+<body>
+<div class="ui container">
+    <div class="ui dividing header">Message</div>
+    <div class="ui message" style="margin-top: 50px">
+        <div class="header"></div>
+        <p>详解Git工作区、暂存区、历史记录区</p>
+    </div>
+    <div class="ui negative message">
+        <div class="header"></div>
+        <p>iles 把当前工作目录中的文件放入暂存区域 </p>
+    </div>
+    <div class="ui negative message">
+        <i class="close icon"></i>
+        <div class="header"></div>
+        <p>由于git revert不会回退到暂存区中，所以使用git status 没有任何变化</p>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="semantic/dist/semantic.js"></script>
+<script>
+    $('.message .close').click(function () {
+        $(this).closest('.message').transition('fly');
+    });
+</script>
+</body>
+</html>
