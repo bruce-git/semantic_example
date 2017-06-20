@@ -6,9 +6,96 @@
     <link rel="stylesheet" href="semantic/dist/semantic.css">
 </head>
 <div class="ui container">
-    
+    <!--class="ui form loading/error/warning"-->
+    <form action="" class="ui form error"  style="margin-top: 50px">
+        <!--ui message error 与ui form error 配合使用-->
+        <div class="ui message error">
+            <div class="header">不好意思</div>
+            <p>我们暂时不支持配送到您指定的地点</p>
+        </div>
+        <div class="two field">
+            <div class="required field">
+                <label for="">姓名</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label for="">电话</label>
+                <input type="text">
+            </div>
+        </div>
+        <button class="ui button" type="submit">提交</button>
+        <div class="ui divider"></div>
+        <div class="fields">
+            <div class="six wide required field ">
+                <label for="">姓名</label>
+                <input type="text">
+            </div>
+            <div class="ten wide field">
+                <label for="">电话</label>
+                <input type="text">
+            </div>
+        </div>
+        <button class="ui button" type="submit">提交</button>
+        <div class="ui divider"></div>
+        <div class="field">
+            <label for="">国家</label>
+            <select name="" id="" class="ui dropdown">
+                <option value="">选择国家</option>
+                <option value="CN">中国</option>
+                <option value="US">美国</option>
+            </select>
+        </div>
+        <div class="inline fields">
+            <label for="payment">选择支付方式</label>
+            <div class="field">
+                <div class="ui radio checkbox">
+                    <input type="radio" name="payment" id="">
+                    <label for="">支付宝</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui radio checkbox">
+                    <input type="radio" name="payment" id="">
+                    <label for="">微信</label>
+                </div>
+            </div>
+        </div>
+        <div class="inline fields">
+            <div class="field">
+                <div class="ui toggle checkbox">
+                    <input type="checkbox" name="" id="">
+                    <label for="">短信通知</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui slider checkbox">
+                    <input type="checkbox" name="" id="">
+                    <label for="">短信通知</label>
+                </div>
+            </div>
+        </div>
+        <div class="disabled field">
+            <label for="">电话</label>
+            <input type="text" disabled>
+        </div>
+        <div class="required error field">
+            <label for="">电话</label>
+            <input type="text">
+        </div>
+        <div class="field">
+            <label for="">电话</label>
+            <input type="text" readonly value="只读">
+        </div>
+
+    </form>
 </div>
 <body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
 <script src="semantic/dist/semantic.js"></script>
+<script>
+    $('select.dropdown').dropdown();
+    $('.ui.radio.checkbox').checkbox();
+    $('.ui.checkbox').checkbox();
+</script>
 </body>
 </html>
