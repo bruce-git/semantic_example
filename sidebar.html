@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边栏</title>
+    <link rel="stylesheet" href="semantic/dist/semantic.css">
+</head>
+<body>
+<div class="ui container">
+    <div class="ui sidebar inverted vertical menu">
+        <div class="item">
+            <h4 class="ui blue header">lipeng.net</h4>
+        </div>
+        <div class="item">
+            <div class="ui inverted transparent icon input">
+                <i class="search icon"></i>
+                <input type="text" placeholder="搜索...">
+            </div>
+        </div>
+        <div class="item">
+            <div class="header">课程</div>
+            <div class="menu">
+                <a href="" class="item">html</a>
+                <a href="" class="item">css</a>
+                <a href="" class="item">javascript</a>
+            </div>
+        </div>
+        <div class="item">博客</div>
+        <div class="item">社区</div>
+    </div>
+    <div class="pusher">
+        <div class="ui container" style="padding:50px;">
+            <h2>Sidebar</h2>
+            <div class="ui section divider"></div>
+            <div class="ui labeled icon button">
+                <i class="sidebar icon"></i>
+                菜单
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="semantic/dist/semantic.js"></script>
+<script>
+    $('.ui.button').click(function(){
+        $('.ui.sidebar')
+            .sidebar({transition:'slide along'})
+            .sidebar('toggle');
+    });
+</script>
+</body>
+</html>
