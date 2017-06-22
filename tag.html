@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签选项卡</title>
+    <link rel="stylesheet" href="semantic/dist/semantic.css">
+</head>
+<body>
+<div class="ui container">
+    <div class="ui top attached tabular menu">
+        <a href="" class="item" data-tab="html">HTML</a>
+        <a href="" class="item active" data-tab="css">CSS</a>
+        <a href="" class="item" data-tab="javascript">JavaScript</a>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="html">html</div>
+    <div class="ui bottom attached tab segment active" data-tab="css">css</div>
+    <div class="ui bottom attached tab segment" data-tab="javascript">javascript</div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="semantic/dist/semantic.js"></script>
+<script>
+    $('.menu .item').tab();
+</script>
+</body>
+</html>
